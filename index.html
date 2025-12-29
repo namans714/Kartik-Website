@@ -22,7 +22,7 @@
 }
 
 body {
-  background: linear-gradient(35deg, darkblue, purple);
+  background: linear-gradient(35deg, black, black);
   color: #e5e7eb;
 }
 
@@ -93,14 +93,19 @@ h2 {
    HOME
 ===================== */
 #home {
-  min-height: 85vh;
+  gap: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .home-text {
-  max-width: 550px;
+  flex: 1;
+}
+.home-image img {
+  width: 350px;
+  border: 2px solid white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .welcome {
@@ -122,11 +127,6 @@ h2 {
   color: #cbd5f5;
 }
 
-.home-image img {
-  width: 350px;
-  border: 2px solid white;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
 
 /* Hover effect */
 .home-image img:hover {
@@ -283,11 +283,7 @@ footer {
    RESPONSIVE
 ===================== */
 @media (max-width: 900px) {
-  #home {
-    flex-direction: column;
-    text-align: center;
-  }
-
+ 
   .home-text {
     max-width: 100%;
   }
@@ -322,7 +318,7 @@ footer {
 @media (max-width: 600px) {
 
   header {
-    position: relative;
+    position: sticky;
   }
 
   section {
@@ -414,7 +410,7 @@ footer {
   .home-image img {
     width: 260px;
   }
-
+  
   .projects-container {
      grid-template-columns: 1fr;
   }
@@ -441,43 +437,61 @@ footer {
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
+
 <!-- HOME -->
 <section id="home">
   <div class="home-text">
     <p class="welcome">Welcome to my website 👋</p>
-<h1>I'm Kartik Rastogi.</h1>
-<h3>GRC & Information Security Professional</h3>
-<p>
- Information Security and GRC professional with hands-on experience in risk management, 
- compliance assessments, security audits, and policy implementation. Skilled in aligning 
- security controls with business objectives and regulatory requirements while supporting 
- secure and compliant operations.
-</p>
-
+    <h1>I'm Kartik Rastogi.</h1>
+    <h3>GRC & Information Security Professional</h3>
+    <p>
+      Information Security and GRC professional with hands-on experience in risk management, 
+      compliance assessments, security audits, and policy implementation. Skilled in aligning 
+      security controls with business objectives and regulatory requirements while supporting 
+      secure and compliant operations.
+    </p>
+    <br>
+    <br>
+    <div class="social-icons">
+  <a href="https://www.linkedin.com/in/kartik-rastogi-342ba12ab" target="_blank">
+    <img src="linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://www.facebook.com/share/1JB7uX5HR6/?mibextid=wwXIfr" target="_blank">
+    <img src="facebook.png" alt="LinkedIn">
+  </a>
+   <a href="https://www.instagram.com/kartikr747?igsh=OWJpNnp6NWMwb2x5&utm_source=qr" target="_blank">
+    <img src="instagram.png" alt="LinkedIn">
+  </a>
+</div>
+  </div>
 
   <div class="home-image">
-    <img src="photo.jpeg" alt="Kartik Photo">
+    <img src="photo2.jpg" alt="Kartik Photo">
   </div>
 </section>
 
 
+<section id="about"></section>
 <!-- ABOUT -->
-<section id="about">
+<section>
   <h2>About Me</h2>
   <p>
   I specialize in Governance, Risk, and Compliance (GRC) and Information Security, with experience in identifying risks, supporting internal and external audits, implementing security policies, and ensuring compliance with industry standards. I enjoy working at the intersection of technology, risk, and business processes,helping organizations strengthen their security posture.
 </p>
 
 </section>
+<section id="skills">
 
 <!-- SKILLS -->
-<section id="skills">
+<section>
+ 
   <h2>Skills</h2>
 
   <div class="skill">Governance, Risk & Compliance (GRC)
@@ -498,8 +512,9 @@ footer {
 
 </section>
 
+<section id="projects"></section>
 <!-- PROJECTS -->
-<section id="projects">
+<section>
   <h2>Projects</h2>
 
   <div class="projects-container">
@@ -534,8 +549,9 @@ footer {
   </div>
 </section>
 
+<section id="education"></section>
 <!-- EDUCATION -->
-<section id="education">
+<section>
   <h2>Education</h2>
 
   <div class="edu-item">
@@ -567,6 +583,12 @@ footer {
 <div class="social-icons">
   <a href="https://www.linkedin.com/in/kartik-rastogi-342ba12ab" target="_blank">
     <img src="linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://www.facebook.com/share/1JB7uX5HR6/?mibextid=wwXIfr" target="_blank">
+    <img src="facebook.png" alt="LinkedIn">
+  </a>
+   <a href="https://www.instagram.com/kartikr747?igsh=OWJpNnp6NWMwb2x5&utm_source=qr" target="_blank">
+    <img src="instagram.png" alt="LinkedIn">
   </a>
 </div>
 <footer>
